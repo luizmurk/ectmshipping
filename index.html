@@ -6,299 +6,365 @@
     <link rel="stylesheet" href="build/styles.css">
     <title>Tailwind CSS Demo</title>
     <style>
-        * {
-          box-sizing: border-box;
+       @media only screen and (min-width: 768px) {
+    /* For Desktops: */
+        .desktop{
+            padding-left: 80px; 
+            padding-right: 80px;
         }
-        
-        body {
-          margin: 0;
-          font-family: Arial, Helvetica, sans-serif;
+
+        .hero{
+            padding-left: 180px; 
+            padding-right: 180px;
         }
-        
-        /* Style the side navigation */
-        .sidenav {
-          height: 100%;
-          width: 300px;
-          position: fixed;
-          z-index: 1;
-          top: 0;
-          left: 0;
-          background-color: #111;
-          overflow-x: hidden;
-        }
-        
-        
-        /* Side navigation links */
-        /* .sidenav a {
-          color: white;
-          padding: 16px;
-          text-decoration: none;
-          display: block;
-        } */
-        
-        /* Change color on hover */
-        /* .sidenav a:hover {
-          background-color: #ddd;
-          color: black;
-        } */
-        
-        /* Style the content */
-        .content {
-          margin-left: 300px;
-          padding-left: 20px;
-        }
-        </style>
+
+    }
+    </style>
 </head>
 <body>
-  
-    <div class="sidenav">
-        
-<div class="relative bg-gray-50 dark:bg-gray-800">
-    <div class="flex flex-col sm:flex-row sm:justify-around">
-        <div class="w-72 h-screen">
-            <nav class="mt-10 px-6 ">
-                <a class="hover:text-gray-800 hover:bg-gray-100 flex items-center p-2 my-6 transition-colors dark:hover:text-white dark:hover:bg-gray-600 duration-200  text-gray-600 dark:text-gray-400 rounded-lg " href="#">
-                    <span class="mx-4 text-lg font-normal">
-                        Element
-                    </span>
-                    <span class="flex-grow text-right">
-                    </span>
-                </a>
-                <a class="hover:text-gray-800 hover:bg-gray-100 flex items-center p-2 my-6 transition-colors dark:hover:text-white dark:hover:bg-gray-600 duration-200  text-gray-800 dark:text-gray-100 rounded-lg bg-gray-100 dark:bg-gray-600" href="#">
-                    <span class="mx-4 text-lg font-normal">
-                        Form
-                    </span>
-                    <span class="flex-grow text-right">
-                    </span>
-                </a>
-                <a class="hover:text-gray-800 hover:bg-gray-100 flex items-center p-2 my-6 transition-colors dark:hover:text-white dark:hover:bg-gray-600 duration-200  text-gray-600 dark:text-gray-400 rounded-lg " href="#">
-                    <span class="mx-4 text-lg font-normal">
-                        Commerce
-                    </span>
-                    <span class="flex-grow text-right">
-                    </span>
-                </a>
-                <a class="hover:text-gray-800 hover:bg-gray-100 flex items-center p-2 my-6 transition-colors dark:hover:text-white dark:hover:bg-gray-600 duration-200  text-gray-600 dark:text-gray-400 rounded-lg " href="#">
-                    <span class="mx-4 text-lg font-normal">
-                        Navigation
-                    </span>
-                    <span class="flex-grow text-right">
-                    </span>
-                </a>
-            </nav>
+   
+    
+    <div class="desktop">
+
+         <!-- Header -->
+    <header class="text-gray-600 body-font">
+        <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
+          <a class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-10 h-10 text-white p-2 bg-blue-500 rounded-full" viewBox="0 0 24 24">
+              <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
+            </svg>
+            <span class="ml-3 text-xl">ECTM SHIPPING</span>
+          </a>
+          <nav class="md:mr-auto md:ml-4 md:py-1 md:pl-4 md:border-l md:border-gray-400	flex flex-wrap items-center text-base justify-center">
+            <a href="./tracking.html" class="mr-5 hover:text-gray-900">Track your shipment</a>
+            <a href="./getaqoute.html" class="mr-5 hover:text-gray-900">Get a qoute</a>
+            <a href="./aboutus.html" class="mr-5 hover:text-gray-900">About us</a>
+            <a href="./contactus.html" class="mr-5 hover:text-gray-900">Contact us</a>
+            
+          </nav>
+          <!-- <button class="inline-flex items-center bg-gray-100 border-0 py-1 px-3 focus:outline-none hover:bg-gray-200 rounded text-base mt-4 md:mt-0">Button
+            <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-1" viewBox="0 0 24 24">
+              <path d="M5 12h14M12 5l7 7-7 7"></path>
+            </svg>
+          </button> -->
         </div>
+      </header>
+    <!-- Header Ends -->
+
+    <!-- Hero -->
+    <section class="text-gray-600 body-font hero">
+        <div class="container mx-auto flex px-5 py-24 md:flex-row flex-col items-center">
+          <div class="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
+            <h1 class="title-font sm:text-4xl text-3xl mb-4 font-medium text-gray-900">ECTM SHIPPING</h1>
+            <p class="mb-8 leading-relaxed">We take care of your Vehicle and adhoc Machinery shipment all the way</p>
+            <div class="flex w-full md:justify-start justify-center items-end">
+              <div class="relative mr-4 md:w-full lg:w-full xl:w-1/2 w-2/4">
+                <label for="hero-field" class="leading-7 text-sm text-gray-600">Track your shipment</label>
+                <input type="text" id="hero-field" name="hero-field" class="w-full bg-gray-100 rounded border bg-opacity-50 border-gray-300 focus:ring-2 focus:ring-indigo-200 focus:bg-transparent focus:border-indigo-500 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
+              </div>
+              <button  class="inline-flex text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg"><a href="./tracking.html">Track</a></button>
+            </div>
+            <p class="text-sm mt-2 text-gray-500 mb-8 w-full">Enter your shipping code and get updates on your shipment.</p>
+            <div class="flex lg:flex-row md:flex-col">
+              <button class="bg-gray-100 inline-flex py-3 px-5 rounded-lg items-center hover:bg-gray-200 focus:outline-none">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="w-6 h-6" viewBox="0 0 512 512">
+                  <path d="M99.617 8.057a50.191 50.191 0 00-38.815-6.713l230.932 230.933 74.846-74.846L99.617 8.057zM32.139 20.116c-6.441 8.563-10.148 19.077-10.148 30.199v411.358c0 11.123 3.708 21.636 10.148 30.199l235.877-235.877L32.139 20.116zM464.261 212.087l-67.266-37.637-81.544 81.544 81.548 81.548 67.273-37.64c16.117-9.03 25.738-25.442 25.738-43.908s-9.621-34.877-25.749-43.907zM291.733 279.711L60.815 510.629c3.786.891 7.639 1.371 11.492 1.371a50.275 50.275 0 0027.31-8.07l266.965-149.372-74.849-74.847z"></path>
+                </svg>
+                <span class="ml-4 flex items-start flex-col leading-none">
+                  <span class="text-xs text-gray-600 mb-1">GET IT ON</span>
+                  <span class="title-font font-medium">Google Play</span>
+                </span>
+              </button>
+              <button class="bg-gray-100 inline-flex py-3 px-5 rounded-lg items-center lg:ml-4 md:ml-0 ml-4 md:mt-4 mt-0 lg:mt-0 hover:bg-gray-200 focus:outline-none">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="w-6 h-6" viewBox="0 0 305 305">
+                  <path d="M40.74 112.12c-25.79 44.74-9.4 112.65 19.12 153.82C74.09 286.52 88.5 305 108.24 305c.37 0 .74 0 1.13-.02 9.27-.37 15.97-3.23 22.45-5.99 7.27-3.1 14.8-6.3 26.6-6.3 11.22 0 18.39 3.1 25.31 6.1 6.83 2.95 13.87 6 24.26 5.81 22.23-.41 35.88-20.35 47.92-37.94a168.18 168.18 0 0021-43l.09-.28a2.5 2.5 0 00-1.33-3.06l-.18-.08c-3.92-1.6-38.26-16.84-38.62-58.36-.34-33.74 25.76-51.6 31-54.84l.24-.15a2.5 2.5 0 00.7-3.51c-18-26.37-45.62-30.34-56.73-30.82a50.04 50.04 0 00-4.95-.24c-13.06 0-25.56 4.93-35.61 8.9-6.94 2.73-12.93 5.09-17.06 5.09-4.64 0-10.67-2.4-17.65-5.16-9.33-3.7-19.9-7.9-31.1-7.9l-.79.01c-26.03.38-50.62 15.27-64.18 38.86z"></path>
+                  <path d="M212.1 0c-15.76.64-34.67 10.35-45.97 23.58-9.6 11.13-19 29.68-16.52 48.38a2.5 2.5 0 002.29 2.17c1.06.08 2.15.12 3.23.12 15.41 0 32.04-8.52 43.4-22.25 11.94-14.5 17.99-33.1 16.16-49.77A2.52 2.52 0 00212.1 0z"></path>
+                </svg>
+                <span class="ml-4 flex items-start flex-col leading-none">
+                  <span class="text-xs text-gray-600 mb-1">Download on the</span>
+                  <span class="title-font font-medium">App Store</span>
+                </span>
+              </button>
+            </div>
+          </div>
+          <div class="lg:max-w-lg lg:w-full md:w-1/2 w-5/6">
+            <img class="object-cover object-center rounded" alt="hero" src="./assets/hero.png">
+          </div>
+        </div>
+      </section>
+    <!-- Hero Ends -->
+
+    <!-- Content -->
+    <section class="rounded-2xl shadow-2xl bg-blue-100 focus:bg-white hover:bg-gray-200 text-gray-600 body-font">
+        <div class="container px-5 py-24 mx-auto">
+          <div class="flex flex-col text-center w-full mb-20">
+            <h2 class="text-xs text-indigo-500 tracking-widest font-medium title-font mb-1">ECTM Shipping</h2>
+            <h1 class="sm:text-3xl text-2xl font-medium title-font mb-4 text-gray-900">A Vehicle and adhoc Machinery Shipping Company</h1>
+            <p class="lg:w-2/3 mx-auto leading-relaxed text-base">At ectm shipping we take pride and focus explicitly on ensuring your mechinery shipment gets to its destination exactly how it was handed over. We guarantee the following.</p>
+          </div>
+          <div class="flex flex-wrap">
+            <div class="xl:w-1/4 lg:w-1/2 md:w-full px-8 py-6 border-l-2 border-gray-200 border-opacity-60">
+              <h2 class="text-lg sm:text-xl text-gray-900 font-medium title-font mb-2">Reliability</h2>
+              <p class="leading-relaxed text-base mb-4">As a shipping company with years of experience we focus on speed and an on time delivery of your automobile shipments.</p>
+              <a class="text-indigo-500 inline-flex items-center">Learn More
+                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-2" viewBox="0 0 24 24">
+                  <path d="M5 12h14M12 5l7 7-7 7"></path>
+                </svg>
+              </a>
+            </div>
+            <div class="xl:w-1/4 lg:w-1/2 md:w-full px-8 py-6 border-l-2 border-gray-200 border-opacity-60">
+              <h2 class="text-lg sm:text-xl text-gray-900 font-medium title-font mb-2">Affordability</h2>
+              <p class="leading-relaxed text-base mb-4">At ECTM providing affordable qoutes to our customers is intrinsic to ensure your are able to use our services.</p>
+              <a class="text-indigo-500 inline-flex items-center">Learn More
+                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-2" viewBox="0 0 24 24">
+                  <path d="M5 12h14M12 5l7 7-7 7"></path>
+                </svg>
+              </a>
+            </div>
+            <div class="xl:w-1/4 lg:w-1/2 md:w-full px-8 py-6 border-l-2 border-gray-200 border-opacity-60">
+              <h2 class="text-lg sm:text-xl text-gray-900 font-medium title-font mb-2">Customer Satisfaction</h2>
+              <p class="leading-relaxed text-base mb-4">Our Customers are our number 1 priority, keeping you happy and providing a stress free shipment of your Automobile is a major focus.</p>
+              <a class="text-indigo-500 inline-flex items-center">Learn More
+                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-2" viewBox="0 0 24 24">
+                  <path d="M5 12h14M12 5l7 7-7 7"></path>
+                </svg>
+              </a>
+            </div>
+            <div class="xl:w-1/4 lg:w-1/2 md:w-full px-8 py-6 border-l-2 border-gray-200 border-opacity-60">
+              <h2 class="text-lg sm:text-xl text-gray-900 font-medium title-font mb-2">Global Network</h2>
+              <p class="leading-relaxed text-base mb-4">With loads of experience in the shipping industry ECTM provides a vast global networking system ensuring shipments are delivered easily</p>
+              <a class="text-indigo-500 inline-flex items-center">Learn More
+                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-2" viewBox="0 0 24 24">
+                  <path d="M5 12h14M12 5l7 7-7 7"></path>
+                </svg>
+              </a>
+            </div>
+          </div>
+          <button class="flex mx-auto mt-16 text-white bg-indigo-500 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded text-lg"><a href="./getaqoute.html">GET A QOUTE</a></button>
+        </div>
+      </section>
+
+      <section class="text-gray-600 body-font">
+        <div class="container px-5 py-24 mx-auto">
+          <div class="flex flex-wrap w-full mb-20">
+            <div class="lg:w-1/2 w-full mb-6 lg:mb-0">
+              <h1 class="sm:text-3xl text-2xl font-medium title-font mb-2 text-gray-900">What we ship majorly!</h1>
+              <div class="h-1 w-20 bg-indigo-500 rounded"></div>
+            </div>
+            <p class="lg:w-1/2 w-full leading-relaxed text-gray-500">As a shipping company we provide a vast array of shipping options to our customers but been an Automobile shipping company makes us focus on the following majorly.</p>
+          </div>
+          <div class="flex flex-wrap -m-4">
+            <div class="xl:w-1/4 md:w-1/2 p-4">
+              <div class="hover:shadow-2xl bg-gray-100 p-6 rounded-lg">
+                <img class="h-40 rounded w-full object-cover object-center mb-6" src="./assets/vehicles.jpeg" alt="content">
+                <h3 class="tracking-widest text-indigo-500 text-xs font-medium title-font">1</h3>
+                <h2 class="text-lg text-gray-900 font-medium title-font mb-4">Vehicles</h2>
+                <p class="leading-relaxed text-base">We handle shipment of any type of motor vehicle you provide us with.</p>
+              </div>
+            </div>
+            <div class=" xl:w-1/4 md:w-1/2 p-4">
+              <div class="hover:shadow-2xl bg-gray-100 p-6 rounded-lg">
+                <img class="h-40 rounded w-full object-cover object-center mb-6" src="./assets/bikes.jpeg" alt="content">
+                <h3 class="tracking-widest text-indigo-500 text-xs font-medium title-font">2</h3>
+                <h2 class="text-lg text-gray-900 font-medium title-font mb-4">Motorcycles</h2>
+                <p class="leading-relaxed text-base">We would handle the shipment of your motorcycle like it was our own, be it a ducatti of a smaller bike, we guarantee safe delivery.</p>
+              </div>
+            </div>
+            <div class=" xl:w-1/4 md:w-1/2 p-4">
+              <div class=" hover:shadow-2xl  bg-gray-100 p-6 rounded-lg">
+                <img class="h-40 rounded w-full object-cover object-center mb-6" src="./assets/generators.jpeg" alt="content">
+                <h3 class="tracking-widest text-indigo-500 text-xs font-medium title-font">3</h3>
+                <h2 class="text-lg text-gray-900 font-medium title-font mb-4">Generators</h2>
+                <p class="leading-relaxed text-base">We also take shipments of generators and mechanically operated systems.</p>
+              </div>
+            </div>
+            <div class=" xl:w-1/4 md:w-1/2 p-4">
+              <div class="hover:shadow-2xl bg-gray-100 p-6 rounded-lg">
+                <img class="h-40 rounded w-full object-cover object-center mb-6" src="./assets/mech.jpeg" alt="content">
+                <h3 class="tracking-widest text-indigo-500 text-xs font-medium title-font">4</h3>
+                <h2 class="text-lg text-gray-900 font-medium title-font mb-4">Machineries</h2>
+                <p class="leading-relaxed text-base">All Mechanical parts ranging from vehicle parts to motorcycles and engines.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+      <section class="text-gray-600 body-font">
+        <div class="container px-5 py-24 mx-auto">
+          <div class="text-center mb-20">
+            <h1 class="sm:text-3xl text-2xl font-medium text-center title-font text-gray-900 mb-4">Adhoc Shipping Services</h1>
+            <p class="text-base leading-relaxed xl:w-2/4 lg:w-3/4 mx-auto">Automobile and Motorcycle Shipping is not actually the only shipping service we provide we also help you ship other heavy weight items listed below.</p>
+          </div>
+          <div class="flex flex-wrap lg:w-4/5 sm:mx-auto sm:mb-2 -mx-2">
+            <div class="p-2 sm:w-1/2 w-full">
+              <div class="bg-gray-100 rounded flex p-4 h-full items-center">
+                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" class="text-indigo-500 w-6 h-6 flex-shrink-0 mr-4" viewBox="0 0 24 24">
+                  <path d="M22 11.08V12a10 10 0 11-5.93-9.14"></path>
+                  <path d="M22 4L12 14.01l-3-3"></path>
+                </svg>
+                <span class="title-font font-medium">Food Stuff</span>
+              </div>
+            </div>
+            <div class="p-2 sm:w-1/2 w-full">
+              <div class="bg-gray-100 rounded flex p-4 h-full items-center">
+                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" class="text-indigo-500 w-6 h-6 flex-shrink-0 mr-4" viewBox="0 0 24 24">
+                  <path d="M22 11.08V12a10 10 0 11-5.93-9.14"></path>
+                  <path d="M22 4L12 14.01l-3-3"></path>
+                </svg>
+                <span class="title-font font-medium">Livestock and Animals</span>
+              </div>
+            </div>
+            <div class="p-2 sm:w-1/2 w-full">
+              <div class="bg-gray-100 rounded flex p-4 h-full items-center">
+                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" class="text-indigo-500 w-6 h-6 flex-shrink-0 mr-4" viewBox="0 0 24 24">
+                  <path d="M22 11.08V12a10 10 0 11-5.93-9.14"></path>
+                  <path d="M22 4L12 14.01l-3-3"></path>
+                </svg>
+                <span class="title-font font-medium"> LNG, CNG, and Other Gas-Based Fuels
+                </span>
+              </div>
+            </div>
+            <div class="p-2 sm:w-1/2 w-full">
+              <div class="bg-gray-100 rounded flex p-4 h-full items-center">
+                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" class="text-indigo-500 w-6 h-6 flex-shrink-0 mr-4" viewBox="0 0 24 24">
+                  <path d="M22 11.08V12a10 10 0 11-5.93-9.14"></path>
+                  <path d="M22 4L12 14.01l-3-3"></path>
+                </svg>
+                <span class="title-font font-medium">Factory Parts</span>
+              </div>
+            </div>
+            <div class="p-2 sm:w-1/2 w-full">
+              <div class="bg-gray-100 rounded flex p-4 h-full items-center">
+                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" class="text-indigo-500 w-6 h-6 flex-shrink-0 mr-4" viewBox="0 0 24 24">
+                  <path d="M22 11.08V12a10 10 0 11-5.93-9.14"></path>
+                  <path d="M22 4L12 14.01l-3-3"></path>
+                </svg>
+                <span class="title-font font-medium">Dry Bulk Cargo</span>
+              </div>
+            </div>
+            <div class="p-2 sm:w-1/2 w-full">
+              <div class="bg-gray-100 rounded flex p-4 h-full items-center">
+                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" class="text-indigo-500 w-6 h-6 flex-shrink-0 mr-4" viewBox="0 0 24 24">
+                  <path d="M22 11.08V12a10 10 0 11-5.93-9.14"></path>
+                  <path d="M22 4L12 14.01l-3-3"></path>
+                </svg>
+                <span class="title-font font-medium">Liquid Bulk Cargo</span>
+              </div>
+            </div>
+          </div>
+          <!-- <button class="flex mx-auto mt-16 text-white bg-indigo-500 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded text-lg">Button</button> -->
+        </div>
+      </section>
+
+
+      <section class="rounded-2xl shadow-2xl bg-red-50 focus:bg-white hover:bg-gray-200 text-gray-600 body-font">
+        <div class="container px-5 py-24 mx-auto">
+            <div class="text-center mb-20">
+                <h1 class="sm:text-3xl text-2xl font-medium text-center title-font text-gray-900 mb-4">What our Customers are saying!</h1>
+                <p class="text-base leading-relaxed xl:w-2/4 lg:w-3/4 mx-auto">If your are still not convinced you can take time to read testimonials from some of our customers.</p>
+              </div>
+          <div class="flex flex-wrap -m-4">
+            <div class="lg:w-1/3 lg:mb-0 mb-6 p-4">
+              <div class="h-full text-center">
+                <img alt="testimonial" class="w-20 h-20 mb-8 object-cover object-center rounded-full inline-block border-2 border-gray-200 bg-gray-100" src="./assets/port1.jpeg">
+                <p class="leading-relaxed">As a biker and adrenaline junkie it's hard to focus on work when you baby (motorcycle) is all the way across the country, thanks to ECTM moving it was a walk in the park. </p>
+                <span class="inline-block h-1 w-10 rounded bg-indigo-500 mt-6 mb-4"></span>
+                <h2 class="text-gray-900 font-medium title-font tracking-wider text-sm">HOLDEN CAULFIELD</h2>
+                <p class="text-gray-500">Senior Product Designer</p>
+              </div>
+            </div>
+            <div class="lg:w-1/3 lg:mb-0 mb-6 p-4">
+              <div class="h-full text-center">
+                <img alt="testimonial" class="w-20 h-20 mb-8 object-cover object-center rounded-full inline-block border-2 border-gray-200 bg-gray-100" src="./assets/port2.jpeg">
+                <p class="leading-relaxed">I had my car moved from my apartment to me work place which was half way across the world just before i could complete a sentence, the speed in delivery here is mind blowing.</p>
+                <span class="inline-block h-1 w-10 rounded bg-indigo-500 mt-6 mb-4"></span>
+                <h2 class="text-gray-900 font-medium title-font tracking-wider text-sm">ALPER KAMU</h2>
+                <p class="text-gray-500">UI Developer</p>
+              </div>
+            </div>
+            <div class="lg:w-1/3 lg:mb-0 p-4">
+              <div class="h-full text-center">
+                <img alt="testimonial" class="w-20 h-20 mb-8 object-cover object-center rounded-full inline-block border-2 border-gray-200 bg-gray-100" src="./assets/port3.jpeg">
+                <p class="leading-relaxed">I know it's hard this days to see a lady with alot of love for motorcycle but as a rider and a marketer moving was made easy by ECTM. Thanks again</p>
+                <span class="inline-block h-1 w-10 rounded bg-indigo-500 mt-6 mb-4"></span>
+                <h2 class="text-gray-900 font-medium title-font tracking-wider text-sm">MELANEY FORD</h2>
+                <p class="text-gray-500">Marketer</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    <!-- Content Ends -->
+
+        <!-- Footer -->
+        <footer class="text-gray-600 body-font">
+            <div class="container px-5 py-24 mx-auto flex md:items-center lg:items-start md:flex-row md:flex-nowrap flex-wrap flex-col">
+              <div class="w-64 flex-shrink-0 md:mx-0 mx-auto text-center md:text-left">
+                <a class="flex title-font font-medium items-center md:justify-start justify-center text-gray-900">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-10 h-10 text-white p-2 bg-indigo-500 rounded-full" viewBox="0 0 24 24">
+                    <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
+                  </svg>
+                  <span class="ml-3 text-xl">ECTM Shipping</span>
+                </a>
+                <p class="mt-2 text-sm text-gray-500">Your number choice for Guaranteed vehicle shipments.</p>
+              </div>
+              <div class="flex-grow flex flex-wrap md:pl-20 -mb-10 md:mt-0 mt-10 md:text-left text-center">
+                <div class="lg:w-1/4 md:w-1/2 w-full px-4">
+                  <h2 class="title-font font-medium text-gray-900 tracking-widest text-sm mb-3">Pages</h2>
+                  <nav class="list-none mb-10">
+                    <li>
+                      <a class="text-gray-600 hover:text-gray-800">Tracking</a>
+                    </li>
+                    <li>
+                      <a class="text-gray-600 hover:text-gray-800">Get Qoute</a>
+                    </li>
+                    <li>
+                      <a class="text-gray-600 hover:text-gray-800">About Us</a>
+                    </li>
+                    <li>
+                      <a class="text-gray-600 hover:text-gray-800">Contact us</a>
+                    </li>
+                  </nav>
+                </div>
+              </div>
+            </div>
+            <div class="bg-gray-100">
+              <div class="container mx-auto py-4 px-5 flex flex-wrap flex-col sm:flex-row">
+                <p class="text-gray-500 text-sm text-center sm:text-left">© 2021 ECTM —
+                  <a href="https://twitter.com/knyttneve" rel="noopener noreferrer" class="text-gray-600 ml-1" target="_blank">@ectmshipping</a>
+                </p>
+                <span class="inline-flex sm:ml-auto sm:mt-0 mt-2 justify-center sm:justify-start">
+                  <a class="text-gray-500">
+                    <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                      <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
+                    </svg>
+                  </a>
+                  <a class="ml-3 text-gray-500">
+                    <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                      <path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"></path>
+                    </svg>
+                  </a>
+                  <a class="ml-3 text-gray-500">
+                    <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                      <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
+                      <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37zm1.5-4.87h.01"></path>
+                    </svg>
+                  </a>
+                  <a class="ml-3 text-gray-500">
+                    <svg fill="currentColor" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="0" class="w-5 h-5" viewBox="0 0 24 24">
+                      <path stroke="none" d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"></path>
+                      <circle cx="4" cy="4" r="2" stroke="none"></circle>
+                    </svg>
+                  </a>
+                </span>
+              </div>
+            </div>
+          </footer>
+        <!-- Footer Ends -->
     </div>
-</div>
-
-      </div>
-      
-      <div class="content">
-        <div>
-            <nav class="bg-white dark:bg-gray-800">
-                <div class="max-w-7xl mx-auto px-8">
-                    <div class="flex items-center justify-between h-16">
-                        <div class=" flex items-center">
-                            <a class="flex-shrink-0" href="/">
-                                <img class="h-8 w-8" src="assets/splash.png" alt="Workflow"/>
-                            </a>
-                        </div>
-                        <div class="block">
-                            <div class="ml-4 flex items-center md:ml-6">
-                                <div class="ml-3 relative">
-                                    <div class="relative inline-block text-left">
-                                        <div>
-                                            <button type="button" class="  flex items-center justify-center w-full rounded-md  px-4 py-2 text-sm font-medium text-gray-700 dark:text-gray-50 hover:bg-gray-50 dark:hover:bg-gray-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-100 focus:ring-gray-500" id="options-menu">
-                                                <svg width="20" fill="currentColor" height="20" class="text-gray-800" viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg">
-                                                    <path d="M1523 1339q-22-155-87.5-257.5t-184.5-118.5q-67 74-159.5 115.5t-195.5 41.5-195.5-41.5-159.5-115.5q-119 16-184.5 118.5t-87.5 257.5q106 150 271 237.5t356 87.5 356-87.5 271-237.5zm-243-699q0-159-112.5-271.5t-271.5-112.5-271.5 112.5-112.5 271.5 112.5 271.5 271.5 112.5 271.5-112.5 112.5-271.5zm512 256q0 182-71 347.5t-190.5 286-285.5 191.5-349 71q-182 0-348-71t-286-191-191-286-71-348 71-348 191-286 286-191 348-71 348 71 286 191 191 286 71 348z">
-                                                    </path>
-                                                </svg>
-                                            </button>
-                                        </div>
-                                        <!-- <div class="origin-top-right absolute right-0 mt-2 w-56 rounded-md shadow-lg bg-white dark:bg-gray-800 ring-1 ring-black ring-opacity-5">
-                                            <div class="py-1 " role="menu" aria-orientation="vertical" aria-labelledby="options-menu">
-                                                <a href="#" class="block block px-4 py-2 text-md text-gray-700 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-100 dark:hover:text-white dark:hover:bg-gray-600" role="menuitem">
-                                                    <span class="flex flex-col">
-                                                        <span>
-                                                            Settings
-                                                        </span>
-                                                    </span>
-                                                </a>
-                                                <a href="#" class="block block px-4 py-2 text-md text-gray-700 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-100 dark:hover:text-white dark:hover:bg-gray-600" role="menuitem">
-                                                    <span class="flex flex-col">
-                                                        <span>
-                                                            Account
-                                                        </span>
-                                                    </span>
-                                                </a>
-                                                <a href="#" class="block block px-4 py-2 text-md text-gray-700 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-100 dark:hover:text-white dark:hover:bg-gray-600" role="menuitem">
-                                                    <span class="flex flex-col">
-                                                        <span>
-                                                            Logout
-                                                        </span>
-                                                    </span>
-                                                </a>
-                                            </div>
-                                        </div> -->
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="-mr-2 flex md:hidden">
-                            <button class="text-gray-800 dark:text-white hover:text-gray-300 inline-flex items-center justify-center p-2 rounded-md focus:outline-none">
-                                <svg width="20" height="20" fill="currentColor" class="h-8 w-8" viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M1664 1344v128q0 26-19 45t-45 19h-1408q-26 0-45-19t-19-45v-128q0-26 19-45t45-19h1408q26 0 45 19t19 45zm0-512v128q0 26-19 45t-45 19h-1408q-26 0-45-19t-19-45v-128q0-26 19-45t45-19h1408q26 0 45 19t19 45zm0-512v128q0 26-19 45t-45 19h-1408q-26 0-45-19t-19-45v-128q0-26 19-45t45-19h1408q26 0 45 19t19 45z">
-                                    </path>
-                                </svg>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-                <div class="md:hidden">
-                    <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-                        <a class="text-gray-300 hover:text-gray-800 dark:hover:text-white block px-3 py-2 rounded-md text-base font-medium" href="/#">
-                            Home
-                        </a>
-                        <a class="text-gray-800 dark:text-white block px-3 py-2 rounded-md text-base font-medium" href="/#">
-                            Gallery
-                        </a>
-                        <a class="text-gray-300 hover:text-gray-800 dark:hover:text-white block px-3 py-2 rounded-md text-base font-medium" href="/#">
-                            Content
-                        </a>
-                        <a class="text-gray-300 hover:text-gray-800 dark:hover:text-white block px-3 py-2 rounded-md text-base font-medium" href="/#">
-                            Contact
-                        </a>
-                    </div>
-                </div>
-            </nav>
-        </div>
 
 
-        <div class="rounded-2xl bg-white dark:bg-gray-700 w-full">
-            <div class="flex items-center p-4 justify-between">
-                <p class="font-bold text-md text-black dark:text-white">
-                    Portfolios
-                </p>
-                <button class="text-sm p-1 text-gray-400 border rounded border-gray-400 mr-4">
-                    <svg width="15" height="15" fill="currentColor" viewBox="0 0 20 20">
-                        <g fill="none">
-                            <path d="M17.222 8.685a1.5 1.5 0 0 1 0 2.628l-10 5.498A1.5 1.5 0 0 1 5 15.496V4.502a1.5 1.5 0 0 1 2.223-1.314l10 5.497z" fill="currentColor">
-                            </path>
-                        </g>
-                    </svg>
-                </button>
-            </div>
-            <div class="py-2 px-4 bg-blue-100 dark:bg-gray-800 text-gray-600 border-l-4 border-blue-500 flex items-center justify-between">
-                <p class="text-xs flex items-center dark:text-white">
-                    <svg width="20" height="20" fill="currentColor" class="text-blue-500 mr-2" viewBox="0 0 24 24">
-                        <g fill="none">
-                            <path d="M12 5a8.5 8.5 0 1 1 0 17a8.5 8.5 0 0 1 0-17zm0 3a.75.75 0 0 0-.743.648l-.007.102v4.5l.007.102a.75.75 0 0 0 1.486 0l.007-.102v-4.5l-.007-.102A.75.75 0 0 0 12 8zm7.17-2.877l.082.061l1.149 1a.75.75 0 0 1-.904 1.193l-.081-.061l-1.149-1a.75.75 0 0 1 .903-1.193zM14.25 2.5a.75.75 0 0 1 .102 1.493L14.25 4h-4.5a.75.75 0 0 1-.102-1.493L9.75 2.5h4.5z" fill="currentColor">
-                            </path>
-                        </g>
-                    </svg>
-                    Add New Investment
-                </p>
-                <div class="flex items-center">
-                    <span class="font-bold text-xs dark:text-gray-200 mr-2 ml-2 md:ml-4">
-                        25 min 20s
-                    </span>
-                    <button class="text-sm p-1 text-gray-400 border rounded bg-blue-500 mr-4">
-                        <svg width="17" height="17" fill="currentColor" viewBox="0 0 24 24" class="text-white">
-                            <g fill="none">
-                                <path d="M9 6a1 1 0 0 1 1 1v10a1 1 0 1 1-2 0V7a1 1 0 0 1 1-1zm6 0a1 1 0 0 1 1 1v10a1 1 0 1 1-2 0V7a1 1 0 0 1 1-1z" fill="currentColor">
-                                </path>
-                            </g>
-                        </svg>
-                    </button>
-                </div>
-            </div>
-            <div class="flex items-center p-4 justify-between border-b-2 border-gray-100">
-                <p class="font-bold text-md text-black dark:text-white">
-                    Active
-                </p>
-                <button class="text-sm p-1 text-gray-400 border rounded border-gray-400 mr-4">
-                    <svg width="15" height="15" fill="currentColor" viewBox="0 0 20 20">
-                        <g fill="none">
-                            <path d="M17.222 8.685a1.5 1.5 0 0 1 0 2.628l-10 5.498A1.5 1.5 0 0 1 5 15.496V4.502a1.5 1.5 0 0 1 2.223-1.314l10 5.497z" fill="currentColor">
-                            </path>
-                        </g>
-                    </svg>
-                </button>
-            </div>
-            <div class="py-2 px-4 text-gray-600 flex items-center justify-between border-b-2 border-gray-100">
-                <p class="text-xs flex items-center dark:text-white">
-                    <svg width="20" height="20" fill="currentColor" class="mr-2" viewBox="0 0 24 24">
-                        <g fill="none">
-                            <path d="M12 5a8.5 8.5 0 1 1 0 17a8.5 8.5 0 0 1 0-17zm0 3a.75.75 0 0 0-.743.648l-.007.102v4.5l.007.102a.75.75 0 0 0 1.486 0l.007-.102v-4.5l-.007-.102A.75.75 0 0 0 12 8zm7.17-2.877l.082.061l1.149 1a.75.75 0 0 1-.904 1.193l-.081-.061l-1.149-1a.75.75 0 0 1 .903-1.193zM14.25 2.5a.75.75 0 0 1 .102 1.493L14.25 4h-4.5a.75.75 0 0 1-.102-1.493L9.75 2.5h4.5z" fill="currentColor">
-                            </path>
-                        </g>
-                    </svg>
-                    International
-                </p>
-                <div class="flex items-center">
-                    <span class="text-xs text-gray-400 mr-2 ml-2 md:ml-4">
-                        30 min
-                    </span>
-                    <button class="text-sm p-1 text-gray-400 border rounded border-gray-400 mr-4">
-                        <svg width="15" height="15" fill="currentColor" viewBox="0 0 20 20">
-                            <g fill="none">
-                                <path d="M17.222 8.685a1.5 1.5 0 0 1 0 2.628l-10 5.498A1.5 1.5 0 0 1 5 15.496V4.502a1.5 1.5 0 0 1 2.223-1.314l10 5.497z" fill="currentColor">
-                                </path>
-                            </g>
-                        </svg>
-                    </button>
-                </div>
-            </div>
-            <div class="py-2 px-4 text-gray-600 flex items-center justify-between border-b-2 border-gray-100">
-                <p class="text-xs flex items-center dark:text-white">
-                    <svg width="20" height="20" fill="currentColor" class="mr-2" viewBox="0 0 24 24">
-                        <g fill="none">
-                            <path d="M12 5a8.5 8.5 0 1 1 0 17a8.5 8.5 0 0 1 0-17zm0 3a.75.75 0 0 0-.743.648l-.007.102v4.5l.007.102a.75.75 0 0 0 1.486 0l.007-.102v-4.5l-.007-.102A.75.75 0 0 0 12 8zm7.17-2.877l.082.061l1.149 1a.75.75 0 0 1-.904 1.193l-.081-.061l-1.149-1a.75.75 0 0 1 .903-1.193zM14.25 2.5a.75.75 0 0 1 .102 1.493L14.25 4h-4.5a.75.75 0 0 1-.102-1.493L9.75 2.5h4.5z" fill="currentColor">
-                            </path>
-                        </g>
-                    </svg>
-                    Slack logo design
-                </p>
-                <div class="flex items-center">
-                    <span class="text-xs text-gray-400 mr-2 ml-2 md:ml-4">
-                        30 min
-                    </span>
-                    <button class="text-sm p-1 text-gray-400 border rounded border-gray-400 mr-4">
-                        <svg width="15" height="15" fill="currentColor" viewBox="0 0 20 20">
-                            <g fill="none">
-                                <path d="M17.222 8.685a1.5 1.5 0 0 1 0 2.628l-10 5.498A1.5 1.5 0 0 1 5 15.496V4.502a1.5 1.5 0 0 1 2.223-1.314l10 5.497z" fill="currentColor">
-                                </path>
-                            </g>
-                        </svg>
-                    </button>
-                </div>
-            </div>
-            <div class="py-2 px-4 text-gray-600 flex items-center justify-between">
-                <p class="text-xs flex items-center dark:text-white">
-                    <svg width="20" height="20" fill="currentColor" class="mr-2" viewBox="0 0 24 24">
-                        <g fill="none">
-                            <path d="M12 5a8.5 8.5 0 1 1 0 17a8.5 8.5 0 0 1 0-17zm0 3a.75.75 0 0 0-.743.648l-.007.102v4.5l.007.102a.75.75 0 0 0 1.486 0l.007-.102v-4.5l-.007-.102A.75.75 0 0 0 12 8zm7.17-2.877l.082.061l1.149 1a.75.75 0 0 1-.904 1.193l-.081-.061l-1.149-1a.75.75 0 0 1 .903-1.193zM14.25 2.5a.75.75 0 0 1 .102 1.493L14.25 4h-4.5a.75.75 0 0 1-.102-1.493L9.75 2.5h4.5z" fill="currentColor">
-                            </path>
-                        </g>
-                    </svg>
-                    Dahboard template
-                </p>
-                <div class="flex items-center">
-                    <span class="text-xs text-gray-400 mr-2 ml-2 md:ml-4">
-                        30 min
-                    </span>
-                    <button class="text-sm p-1 text-gray-400 border rounded border-gray-400 mr-4">
-                        <svg width="15" height="15" fill="currentColor" viewBox="0 0 20 20">
-                            <g fill="none">
-                                <path d="M17.222 8.685a1.5 1.5 0 0 1 0 2.628l-10 5.498A1.5 1.5 0 0 1 5 15.496V4.502a1.5 1.5 0 0 1 2.223-1.314l10 5.497z" fill="currentColor">
-                                </path>
-                            </g>
-                        </svg>
-                    </button>
-                </div>
-            </div>
-        </div>
-        
-
-      </div>
 </body>
 </html>

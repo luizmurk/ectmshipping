@@ -251,7 +251,7 @@
               <label for="full-name" class="leading-7 text-sm text-gray-600">Vehicle Model</label>
               <input type="text" id="model" name="model" class="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-transparent focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
             </div>
-            <button onclick="sendQouteRequest()" class="text-white bg-indigo-500 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded text-lg">Send</button>
+            <button id="button"  onclick="sendQouteRequest()" class="text-white bg-indigo-500 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded text-lg">Send</button>
           </div>
 
 
@@ -338,7 +338,9 @@
         }
         return result;
       }
+      document.getElementById("button").innerHTML = 'Send Qoute';
       async function sendQouteRequest() {
+        document.getElementById("button").innerHTML = 'Sending...';
         var firebaseConfig = {
         apiKey: "AIzaSyCa6XMcP_6UzR_dfw7TN_g5Ae8sCbj3Bjc",
         authDomain: "ectm-admin.firebaseapp.com",
@@ -378,14 +380,39 @@
           model: document.getElementById("model").value,
           make: document.getElementById("make").value,
           tracking_code: code,
-          shipment_status: 'inactive',
-          status: '',
-          update_message: '',
-          expected_delivery_date: '',
-          route: '',
-          delivery_man_contact: '',
+          tracking_updates: []
+          // shipment_status: 'inactive',
+          // status: '',
+          // update_message: '',
+          // expected_delivery_date: '',
+          // route: '',
+          // delivery_man_contact: '',
       };
         const res = await db.collection('qoutesRequest').doc(code).set(qouteObj);
+        document.getElementById("button").innerHTML = 'Send Qoute';
+        document.getElementById("full_name").innerHTML = '';
+          document.getElementById("email").innerHTML = '';
+          document.getElementById("cell_phone").innerHTML = '';
+         document.getElementById("home_phone").innerHTML = '';
+          document.getElementById("street_address").innerHTML = '';
+          document.getElementById("city").innerHTML = '';
+          document.getElementById("state").innerHTML = '';
+          document.getElementById("pick_up_location").innerHTML = '';
+           document.getElementById("street_address_pickup").innerHTML = '';
+          document.getElementById("city_pickup").innerHTML = '';
+          document.getElementById("state_pickup").innerHTML = '';
+          document.getElementById("zipcode_pickup").innerHTML = '';
+          document.getElementById("date_pickup").innerHTML = '';
+          document.getElementById("delivery_location").innerHTML = '';
+          document.getElementById("delivery_street_address").innerHTML = '';
+          document.getElementById("delivery_city").innerHTML = '';
+          document.getElementById("delivery_state").innerHTML = '';
+           document.getElementById("delivery_zip_code").innerHTML = '';
+          document.getElementById("quantity").innerHTML = '';
+         document.getElementById("type").innerHTML = '';
+         document.getElementById("year").innerHTML = '';
+           document.getElementById("model").innerHTML = '';
+          document.getElementById("make").innerHTML = '';
         console.log(qouteObj);
       } 
       </script>
